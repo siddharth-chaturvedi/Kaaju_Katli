@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Message for Khushi Soni 🍬 | From Madhav</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            rosegold: '#E8A598',
+            champagne: '#F5E6D3',
+            crimson: '#FF4B72',
+            darkbg: '#0A0A0C',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Glassmorphism Styles */
+    .glass-card {
+      background: rgba(18, 18, 24, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(232, 165, 152, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+    
+    .glass-pill {
+      background: rgba(232, 165, 152, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(232, 165, 152, 0.25);
+    }
+
+    /* Ambient Glow Animations */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.08); }
+    }
+    .glow-orb-1 {
+      animation: pulseGlow 8s ease-in-out infinite;
+    }
+    .glow-orb-2 {
+      animation: pulseGlow 10s ease-in-out infinite 2s;
+    }
+
+    /* Vinyl Disc Spinning */
+    @keyframes spinDisc {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .spin-active {
+      animation: spinDisc 6s linear infinite;
+    }
+
+    /* Floating Heart Particles */
+    @keyframes floatUp {
+      0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+      20% { opacity: 0.6; }
+      80% { opacity: 0.6; }
+      100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+    .particle {
+      position: absolute;
+      pointer-events: none;
+      animation: floatUp linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#0A0A0C] text-[#F5E6D3] font-sans relative overflow-x-hidden selection:bg-[#E8A598]/30 selection:text-white">
+
+  <!-- YOUTUBE PLAYER CONTAINER (HIDDEN) -->
+  <div class="hidden">
+    <div id="youtube-player"></div>
+  </div>
+
+  <!-- CANVAS FOR HEART CONFETTI CELEBRATION -->
+  <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-50"></canvas>
+
+  <!-- AMBIENT GLOW ORBS -->
+  <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#E8A598]/15 blur-[140px] pointer-events-none glow-orb-1 z-0"></div>
+  <div class="fixed bottom-[-10%] right-[-10%] w-[550px] h-[550px] rounded-full bg-[#FF4B72]/10 blur-[160px] pointer-events-none glow-orb-2 z-0"></div>
+  <div class="fixed top-[40%] right-[25%] w-[350px] h-[350px] rounded-full bg-[#F5E6D3]/5 blur-[120px] pointer-events-none z-0"></div>
+
+  <!-- FLOATING EMOJI BACKGROUND PARTICLES -->
+  <div id="particle-container" class="fixed inset-0 overflow-hidden pointer-events-none z-0"></div>
+
+  <!-- INTERACTIVE ROMANTIC ENVELOPE OPENING OVERLAY -->
+  <div id="autoplay-overlay" onclick="handleUserStartAudio()" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-xl cursor-pointer transition-all duration-700">
+    <div class="glass-card rounded-3xl p-8 md:p-12 text-center max-w-md w-full mx-auto border border-[#E8A598]/50 shadow-[0_0_60px_rgba(232,165,152,0.25)] relative overflow-hidden group transform hover:scale-[1.02] transition-transform">
+      
+      <!-- Subtle ambient glow inside overlay -->
+      <div class="absolute -top-12 -left-12 w-32 h-32 bg-[#E8A598]/20 rounded-full blur-2xl"></div>
+      <div class="absolute -bottom-12 -right-12 w-32 h-32 bg-[#FF4B72]/20 rounded-full blur-2xl"></div>
+
+      <!-- Wax Seal Heart Badge -->
+      <div class="relative w-20 h-20 rounded-full bg-gradient-to-tr from-[#FF4B72] to-[#E8A598] p-0.5 mx-auto mb-6 shadow-[0_0_30px_rgba(255,75,114,0.5)] animate-pulse">
+        <div class="w-full h-full bg-[#0A0A0C] rounded-full flex items-center justify-center text-[#FF4B72]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+      </div>
+
+      <span class="text-xs font-mono uppercase tracking-[0.3em] text-[#E8A598] block mb-2 font-semibold">Special Letter Unseal</span>
+      
+      <h3 class="text-3xl font-serif text-[#F5E6D3] font-bold mb-3 leading-snug">
+        For Dearest Khushi Soni 🍬
+      </h3>
+
+      <p class="text-sm text-[#F5E6D3]/80 font-light mb-8 leading-relaxed italic">
+        "Some messages are written in words, but meant to be felt with music. Open your letter..."
+      </p>
+
+      <button class="w-full py-4 rounded-full bg-gradient-to-r from-[#E8A598] to-[#FF4B72] text-black font-semibold text-base tracking-wide shadow-[0_0_25px_rgba(232,165,152,0.4)] flex items-center justify-center space-x-2 group-hover:shadow-[0_0_40px_rgba(255,75,114,0.6)] transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <span>Unseal Letter & Start Music 🎵</span>
+      </button>
+
+      <p class="text-[11px] text-[#E8A598]/60 mt-4 tracking-wider">Tap anywhere on screen to play music in full volume ✨</p>
+    </div>
+  </div>
+
+  <!-- FLOATING MUSIC NAVIGATION BAR -->
+  <div class="fixed top-6 right-6 z-40">
+    <div class="glass-card rounded-full px-4 py-2 flex items-center space-x-3 shadow-2xl">
+      <!-- Vinyl Disc Visual -->
+      <div id="music-disc" onclick="togglePlay()" class="cursor-pointer flex items-center justify-center relative w-9 h-9 rounded-full bg-gradient-to-tr from-[#1E1E28] to-[#2A2A38] border border-[#E8A598]/40 shadow-inner group">
+        <div id="disc-inner" class="w-full h-full rounded-full flex items-center justify-center">
+          <div class="w-3 h-3 rounded-full bg-[#E8A598]"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/60 rounded-full transition-opacity">
+          <svg id="play-icon-disc" class="w-4 h-4 text-[#F5E6D3] ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon-disc" class="w-4 h-4 text-[#F5E6D3] hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </div>
+      </div>
+
+      <!-- Sound Wave & Info -->
+      <div class="flex flex-col cursor-pointer" onclick="togglePlay()">
+        <span id="music-status-text" class="text-[10px] uppercase tracking-wider text-[#E8A598] font-semibold flex items-center">
+          Tap to Play Music 🎵
+        </span>
+        <span class="text-xs text-[#F5E6D3]/70 font-serif italic truncate max-w-[120px]">
+          Our Background Melody
+        </span>
+      </div>
+
+      <!-- Mute Toggle -->
+      <button id="mute-btn" onclick="toggleMute()" class="p-1.5 text-[#F5E6D3]/60 hover:text-[#F5E6D3] transition-colors rounded-full hover:bg-white/5">
+        <svg id="volume-icon" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 010 7.07"/></svg>
+        <svg id="mute-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- MAIN LAYOUT CONTAINER -->
+  <main class="relative z-10 max-w-4xl mx-auto px-6 font-sans">
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center pt-16 pb-12 relative">
+      
+      <!-- Pill Header Badge -->
+      <div class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full glass-pill mb-8 border border-[#E8A598]/30 shadow-lg">
+        <span class="text-sm tracking-wide text-[#F5E6D3] font-medium">
+          For My Sweetest Kaaju Katli 🍬✨
+        </span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-normal tracking-tight leading-[1.1] mb-6">
+        A Message for <br />
+        <span class="bg-gradient-to-r from-[#F5E6D3] via-[#E8A598] to-[#FF4B72] bg-clip-text text-transparent italic font-serif font-semibold">
+          Khushi Soni
+        </span>
+      </h1>
+
+      <p class="max-w-lg text-base md:text-lg text-[#F5E6D3]/85 font-light mb-10 leading-relaxed italic">
+        "In a world full of choices, noise, and distractions, my heart made its choice long ago. Let our track play, relax, and step inside this little world created just for you..."
+      </p>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2 opacity-60 hover:opacity-100 transition-opacity">
+        <span class="text-xs uppercase tracking-widest text-[#E8A598]">Scroll Slow</span>
+        <svg class="w-4 h-4 animate-bounce text-[#E8A598]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+      </div>
+
+    </section>
+
+    <!-- PROPOSAL REVEAL SECTION -->
+    <section class="py-24 flex flex-col items-center justify-center min-h-screen">
+      
+      <div class="w-full space-y-24 text-center">
+        
+        <!-- Sequential Choice Cards -->
+        <div class="space-y-12">
+          
+          <div class="glass-card rounded-2xl px-8 py-6 border border-[#E8A598]/20 hover:border-[#E8A598]/50 transition-all duration-300 hover:scale-[1.02] shadow-lg max-w-lg mx-auto">
+            <span class="text-[#F5E6D3]/40 text-xs uppercase tracking-widest font-mono block mb-1">Choice 1</span>
+            <h3 class="text-2xl md:text-4xl font-serif text-[#F5E6D3] font-medium tracking-wide">Friendship or you.</h3>
+          </div>
+
+          <div class="glass-card rounded-2xl px-8 py-6 border border-[#E8A598]/20 hover:border-[#E8A598]/50 transition-all duration-300 hover:scale-[1.02] shadow-lg max-w-lg mx-auto">
+            <span class="text-[#F5E6D3]/40 text-xs uppercase tracking-widest font-mono block mb-1">Choice 2</span>
+            <h3 class="text-2xl md:text-4xl font-serif text-[#F5E6D3] font-medium tracking-wide">Home or you.</h3>
+          </div>
+
+          <div class="glass-card rounded-2xl px-8 py-6 border border-[#E8A598]/20 hover:border-[#E8A598]/50 transition-all duration-300 hover:scale-[1.02] shadow-lg max-w-lg mx-auto">
+            <span class="text-[#F5E6D3]/40 text-xs uppercase tracking-widest font-mono block mb-1">Choice 3</span>
+            <h3 class="text-2xl md:text-4xl font-serif text-[#F5E6D3] font-medium tracking-wide">Breathing or you.</h3>
+          </div>
+
+          <div class="glass-card rounded-2xl px-8 py-6 border border-[#E8A598]/20 hover:border-[#E8A598]/50 transition-all duration-300 hover:scale-[1.02] shadow-lg max-w-lg mx-auto">
+            <span class="text-[#F5E6D3]/40 text-xs uppercase tracking-widest font-mono block mb-1">Choice 4</span>
+            <h3 class="text-2xl md:text-4xl font-serif text-[#F5E6D3] font-medium tracking-wide">My job or you.</h3>
+          </div>
+
+          <div class="glass-card rounded-2xl px-8 py-6 border border-[#E8A598]/20 hover:border-[#E8A598]/50 transition-all duration-300 hover:scale-[1.02] shadow-lg max-w-lg mx-auto">
+            <span class="text-[#F5E6D3]/40 text-xs uppercase tracking-widest font-mono block mb-1">Choice 5</span>
+            <h3 class="text-2xl md:text-4xl font-serif text-[#F5E6D3] font-medium tracking-wide">College Vidya or you.</h3>
+          </div>
+
+          <div class="glass-card rounded-2xl px-8 py-6 border border-[#E8A598]/20 hover:border-[#E8A598]/50 transition-all duration-300 hover:scale-[1.02] shadow-lg max-w-lg mx-auto">
+            <span class="text-[#F5E6D3]/40 text-xs uppercase tracking-widest font-mono block mb-1">Choice 6</span>
+            <h3 class="text-2xl md:text-4xl font-serif text-[#F5E6D3] font-medium tracking-wide">Money or you.</h3>
+          </div>
+
+          <div class="glass-card rounded-2xl px-8 py-6 border border-[#E8A598]/20 hover:border-[#E8A598]/50 transition-all duration-300 hover:scale-[1.02] shadow-lg max-w-lg mx-auto">
+            <span class="text-[#F5E6D3]/40 text-xs uppercase tracking-widest font-mono block mb-1">Choice 7</span>
+            <h3 class="text-2xl md:text-4xl font-serif text-[#F5E6D3] font-medium tracking-wide">Everything or you.</h3>
+          </div>
+
+        </div>
+
+        <!-- Mid-section Impact Callout -->
+        <div class="pt-16 pb-8 relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-64 h-64 bg-[#E8A598]/10 rounded-full blur-3xl"></div>
+          </div>
+
+          <div class="relative glass-card rounded-3xl p-10 md:p-14 border border-[#E8A598]/40 shadow-2xl max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-[#F5E6D3] leading-tight tracking-wide">
+              "You. Just you. Only you. Always you."
+            </h2>
+            <p class="mt-4 text-sm md:text-base text-[#E8A598] font-light italic">
+              Without a second thought. Without a single doubt.
+            </p>
+          </div>
+        </div>
+
+        <!-- Climax Header -->
+        <div class="pt-20 pb-12">
+          <span class="text-xs uppercase tracking-[0.3em] text-[#E8A598]/80 font-bold block mb-4">
+            The Absolute Truth
+          </span>
+          <h2 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold bg-gradient-to-r from-[#F5E6D3] via-[#E8A598] to-[#FF4B72] bg-clip-text text-transparent leading-relaxed tracking-wider drop-shadow-lg">
+            Tum......... Sirf Tum...........
+          </h2>
+          <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-[#E8A598] to-transparent mx-auto mt-6"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROPOSAL ACTION SECTION -->
+    <section class="py-24 min-h-screen flex flex-col justify-center items-center relative">
+      
+      <div class="w-full glass-card rounded-3xl p-8 md:p-16 border border-[#E8A598]/30 shadow-2xl text-center relative overflow-hidden max-w-3xl">
+        
+        <!-- Glowing Heart -->
+        <div class="w-20 h-20 rounded-full bg-[#FF4B72]/15 border border-[#FF4B72]/30 flex items-center justify-center mx-auto mb-8 text-[#FF4B72] shadow-inner">
+          <svg class="w-10 h-10 fill-current animate-pulse" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+
+        <!-- Proposal Question -->
+        <h2 class="text-3xl md:text-5xl font-serif font-bold text-[#F5E6D3] leading-snug mb-12">
+          Will you make me the happiest person and walk through life with me?
+        </h2>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 relative min-h-[140px]">
+          
+          <!-- YES BUTTON -->
+          <button
+            onclick="handleYes()"
+            class="w-full sm:w-auto px-10 py-5 rounded-full bg-gradient-to-r from-[#E8A598] to-[#FF4B72] text-black font-semibold text-lg tracking-wide shadow-[0_0_35px_rgba(232,165,152,0.4)] hover:shadow-[0_0_50px_rgba(255,75,114,0.6)] transform hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3 z-20 cursor-pointer"
+          >
+            <span>YES, FOREVER! ❤️✨</span>
+          </button>
+
+          <!-- PLAYFUL NO BUTTON -->
+          <button
+            id="no-button"
+            onmouseenter="moveNoButton()"
+            onclick="moveNoButton()"
+            class="w-full sm:w-auto px-8 py-5 rounded-full glass-pill text-[#F5E6D3]/80 hover:text-[#F5E6D3] text-base font-medium border border-[#F5E6D3]/20 transition-all z-10"
+          >
+            Let me think... 🤔
+          </button>
+
+        </div>
+
+        <!-- Footer Note -->
+        <p class="text-xs text-[#F5E6D3]/40 mt-12 uppercase tracking-widest font-mono">
+          Designed with eternal love for Kaaju Katli 🍬 | Lots of Love, Madhav
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- SUCCESS MODAL -->
+  <div id="success-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-6 bg-black/80 backdrop-blur-md">
+    <div class="glass-card rounded-3xl p-8 md:p-12 border border-[#E8A598] max-w-md w-full text-center space-y-6 shadow-2xl">
+      <div class="w-16 h-16 rounded-full bg-[#E8A598]/20 text-[#E8A598] flex items-center justify-center mx-auto">
+        <svg class="w-8 h-8 animate-spin" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/></svg>
+      </div>
+      
+      <h3 class="text-3xl font-serif font-bold text-[#F5E6D3]">
+        You Said Yes! 💖
+      </h3>
+
+      <p class="text-[#F5E6D3]/80 text-sm leading-relaxed">
+        Opening WhatsApp to send your acceptance message to Madhav... If it doesn't open automatically, tap below!
+      </p>
+
+      <a
+        href="https://api.whatsapp.com/send?phone=919897575770&text=YES!%20%F0%9F%A4%A9%F0%9F%A9B7%20Lots%20of%20Love%2C%20Madhav!%20You%20are%20my%20forever.%20%F0%9F%92%96%E2%9C%A8"
+        class="inline-flex items-center justify-center space-x-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-semibold text-sm shadow-lg hover:brightness-110 transition-all w-full"
+      >
+        <span>Send Message to Madhav 📲</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    let player;
+    let isPlaying = false;
+    let isMuted = false;
+    let noCount = 0;
+
+    // Web Audio Instant Harmonic Fallback (Plays harmonic synth chord instantly on touch)
+    function playInstantHarmonicSound() {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        const frequencies = [261.63, 329.63, 392.00, 493.88, 523.25]; // C Major 7 chord notes
+        frequencies.forEach((freq, i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+          gain.gain.setValueAtTime(0, ctx.currentTime);
+          gain.gain.linearRampToValueAtTime(0.06, ctx.currentTime + 0.1 + i * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 2.5 + i * 0.15);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(ctx.currentTime + i * 0.08);
+          osc.stop(ctx.currentTime + 3.0);
+        });
+      } catch (e) {
+        console.log("Web audio synth fallback:", e);
+      }
+    }
+
+    // Load YouTube Iframe API
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('youtube-player', {
+        height: '0',
+        width: '0',
+        videoId: 'iAIBF2ngbWY',
+        playerVars: {
+          'autoplay': 1,
+          'loop': 1,
+          'playlist': 'iAIBF2ngbWY',
+          'controls': 0,
+          'enablejsapi': 1,
+          'origin': window.location.origin
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      player.setVolume(100);
+      player.unMute();
+      player.playVideo();
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.PLAYING) {
+        isPlaying = true;
+        updateAudioUI(true);
+        const overlay = document.getElementById('autoplay-overlay');
+        if (overlay) {
+          overlay.style.opacity = '0';
+          setTimeout(() => overlay.style.display = 'none', 500);
+        }
+      } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+        isPlaying = false;
+        updateAudioUI(false);
+      }
+    }
+
+    // Direct User Interaction Handler to Guarantee Autoplay
+    function handleUserStartAudio() {
+      playInstantHarmonicSound();
+
+      if (player && typeof player.playVideo === 'function') {
+        player.setVolume(100);
+        player.unMute();
+        player.playVideo();
+      }
+
+      const overlay = document.getElementById('autoplay-overlay');
+      if (overlay) {
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.style.display = 'none', 500);
+      }
+    }
+
+    // Fallback touch event listener on entire document
+    document.addEventListener('click', function autoPlayFallback() {
+      if (!isPlaying) {
+        handleUserStartAudio();
+      }
+      document.removeEventListener('click', autoPlayFallback);
+    }, { once: true });
+
+    function togglePlay() {
+      if (!player) return;
+      if (isPlaying) {
+        player.pauseVideo();
+      } else {
+        player.setVolume(100);
+        player.unMute();
+        player.playVideo();
+      }
+    }
+
+    function toggleMute() {
+      if (!player) return;
+      if (isMuted) {
+        player.unMute();
+        player.setVolume(100);
+        isMuted = false;
+        document.getElementById('volume-icon').classList.remove('hidden');
+        document.getElementById('mute-icon').classList.add('hidden');
+      } else {
+        player.mute();
+        isMuted = true;
+        document.getElementById('volume-icon').classList.add('hidden');
+        document.getElementById('mute-icon').classList.remove('hidden');
+      }
+    }
+
+    function updateAudioUI(playing) {
+      isPlaying = playing;
+      const discInner = document.getElementById('disc-inner');
+      const statusText = document.getElementById('music-status-text');
+      const playIcon = document.getElementById('play-icon-disc');
+      const pauseIcon = document.getElementById('pause-icon-disc');
+
+      if (playing) {
+        discInner.classList.add('spin-active');
+        playIcon.classList.add('hidden');
+        pauseIcon.classList.remove('hidden');
+        statusText.innerHTML = `
+          Playing Music
+          <span class="flex items-end h-2.5 ml-1.5 space-x-0.5">
+            <span class="w-0.5 h-full bg-[#E8A598] animate-pulse"></span>
+            <span class="w-0.5 h-1.5 bg-[#E8A598] animate-pulse"></span>
+            <span class="w-0.5 h-2 bg-[#E8A598] animate-pulse"></span>
+          </span>
+        `;
+      } else {
+        discInner.classList.remove('spin-active');
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+        statusText.innerHTML = `Play Romantic Track 🎵`;
+      }
+    }
+
+    // Dodging logic for "Let me think..." button
+    function moveNoButton() {
+      const btn = document.getElementById('no-button');
+      noCount++;
+      
+      const newX = (Math.random() - 0.5) * 260;
+      const newY = (Math.random() - 0.5) * 160;
+      btn.style.transform = `translate(${newX}px, ${newY}px)`;
+
+      const noPhrases = [
+        "Let me think... 🤔",
+        "Are you sure? 🥺",
+        "Try catching me! 🏃‍♂️",
+        "Nice try! 😉",
+        "Okay okay, last chance! 💖"
+      ];
+
+      if (noCount < 5) {
+        btn.innerHTML = noPhrases[noCount];
+      } else {
+        btn.innerHTML = "Fine, YES! ❤️ (Fate spoke)";
+        btn.onclick = handleYes;
+        btn.onmouseenter = null;
+        btn.classList.add('animate-bounce');
+      }
+    }
+
+    // Handle "YES, FOREVER!" Click
+    function handleYes() {
+      document.getElementById('success-modal').classList.remove('hidden');
+      triggerHeartConfetti();
+
+      const targetUrl = "https://api.whatsapp.com/send?phone=919897575770&text=YES!%20%F0%9F%A4%A9%F0%9F%A9B7%20Lots%20of%20Love%2C%20Madhav!%20You%20are%20my%20forever.%20%F0%9F%92%96%E2%9C%A8";
+
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 1800);
+    }
+
+    // Heart Confetti Canvas Animation
+    function triggerHeartConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const particles = [];
+      const colors = ['#E8A598', '#F5E6D3', '#FF4B72', '#E63946', '#FFD1DC'];
+
+      class HeartParticle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = canvas.height + Math.random() * 20;
+          this.size = Math.random() * 14 + 8;
+          this.speedY = -(Math.random() * 5 + 3);
+          this.speedX = (Math.random() - 0.5) * 4;
+          this.color = colors[Math.floor(Math.random() * colors.length)];
+          this.opacity = 1;
+          this.rotation = Math.random() * 360;
+          this.rotSpeed = (Math.random() - 0.5) * 5;
+        }
+
+        draw() {
+          ctx.save();
+          ctx.translate(this.x, this.y);
+          ctx.rotate((this.rotation * Math.PI) / 180);
+          ctx.globalAlpha = this.opacity;
+          ctx.fillStyle = this.color;
+          
+          ctx.beginPath();
+          const topCurveHeight = this.size * 0.3;
+          ctx.moveTo(0, topCurveHeight);
+          ctx.bezierCurveTo(0, 0, -this.size / 2, 0, -this.size / 2, topCurveHeight);
+          ctx.bezierCurveTo(-this.size / 2, (this.size + topCurveHeight) / 2, 0, this.size, 0, this.size);
+          ctx.bezierCurveTo(0, this.size, this.size / 2, (this.size + topCurveHeight) / 2, this.size / 2, topCurveHeight);
+          ctx.bezierCurveTo(this.size / 2, 0, 0, 0, 0, topCurveHeight);
+          ctx.closePath();
+          ctx.fill();
+          ctx.restore();
+        }
+
+        update() {
+          this.y += this.speedY;
+          this.x += this.speedX;
+          this.rotation += this.rotSpeed;
+          if (this.y < canvas.height * 0.7) {
+            this.opacity -= 0.008;
+          }
+        }
+      }
+
+      for (let i = 0; i < 90; i++) {
+        particles.push(new HeartParticle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < particles.length; i++) {
+          particles[i].update();
+          particles[i].draw();
+        }
+        if (particles.some(p => p.opacity > 0)) {
+          requestAnimationFrame(animate);
+        }
+      }
+      animate();
+    }
+
+    // Populate Floating Background Emoji Particles
+    window.addEventListener('DOMContentLoaded', () => {
+      const particleContainer = document.getElementById('particle-container');
+      const emojis = ['🍬', '✨', '💖', '🌸', '✨'];
+
+      for (let i = 0; i < 16; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle text-[#E8A598]/20';
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.bottom = `-20px`;
+        p.style.fontSize = `${Math.random() * 16 + 12}px`;
+        p.style.animationDuration = `${Math.random() * 12 + 10}s`;
+        p.style.animationDelay = `${Math.random() * 5}s`;
+        p.innerText = emojis[i % emojis.length];
+        particleContainer.appendChild(p);
+      }
+    });
+  </script>
+</body>
+</html>
